@@ -32,7 +32,7 @@ if (!window.__POWERED_BY_QIANKUN__) {
 }
 
 export const bootstrap = async () => {
-  console.log('[mf-subapp1] react app bootstraped');
+  console.log('[mf-subapp1] react app bootstrapped');
 };
 
 export const mount = async (props) => {
