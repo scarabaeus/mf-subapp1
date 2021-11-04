@@ -1,15 +1,13 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div>
-        mf-subapp1
-        <p>
-          React version: {React.version}
-        </p>
-      </div>
+      mf-subapp1
+      <p>React version: {React.version}</p>
+    </div>
   );
-}
+};
 
 export default App;
