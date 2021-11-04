@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "rescripts start",
+    "start": "PORT=7101 rescripts start",
     "build": "rescripts build",
     "test": "rescripts test",
     "eject": "rescripts eject"

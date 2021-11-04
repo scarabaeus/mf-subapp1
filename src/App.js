@@ -3,12 +3,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      mf-subapp1
-      <ul>
-        <li>React {React.version}</li>
-      </ul>
-    </div>
+    <div>
+        mf-subapp1
+        <p>
+          React version: {React.version}
+        </p>
+      </div>
   );
 }
 
