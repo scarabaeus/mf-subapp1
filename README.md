@@ -1,3 +1,8 @@
 # mf-subapp2
 
-To be run with mf-root
+### Apps:
+
+- mf-root
+- mf-menu
+- mf-subapp1
+- mf-subapp2
