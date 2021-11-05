@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 const render = (props) => {
-  const { container } = props;
+  const { container, standAlone } = props;
   ReactDOM.render(
-    <App />,
+    <App standAlone={standAlone} />,
     container
       ? container.querySelector('#root')
       : document.querySelector('#root'),
@@ -36,9 +36,10 @@ export const bootstrap = async () => {
 };
 
 export const mount = async (props) => {
+  const updatedProps = { ...props, standAlone: false };
   console.log('[mf-subapp1] props from main framework', props);
-  storeTest(props);
-  render(props);
+  storeTest(updatedProps);
+  render(updatedProps);
 };
 
 export const unmount = async (props) => {
