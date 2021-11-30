@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 const render = (props) => {
-  const { container, standAlone } = props;
+  const { container, ...rest } = props;
   ReactDOM.render(
-    <App standAlone={standAlone} />,
+    <App {...rest} />,
     container
       ? container.querySelector('#root')
       : document.querySelector('#root'),
@@ -14,11 +14,11 @@ const render = (props) => {
 };
 
 const storeTest = (props) => {
-  props.onGlobalStateChange(
-    (value, prev) =>
-      console.log(`[onGlobalStateChange - ${props.name}]:`, value, prev),
-    true,
-  );
+  // props.onGlobalStateChange(
+  //   (value, prev) =>
+  //     console.log(`[onGlobalStateChange - ${props.name}]:`, value, prev),
+  //   true,
+  // );
   props.setGlobalState({
     ignore: props.name,
     user: {
@@ -32,14 +32,13 @@ if (!window.__POWERED_BY_QIANKUN__) {
 }
 
 export const bootstrap = async () => {
-  console.log('[mf-subapp1] react app bootstrapped');
+  // console.log('[mf-subapp1] react app bootstrapped');
 };
 
 export const mount = async (props) => {
-  const updatedProps = { ...props, standAlone: false };
-  console.log('[mf-subapp1] props from main framework', props);
-  storeTest(updatedProps);
-  render(updatedProps);
+  // console.log('[mf-subapp1] props from main framework', props);
+  storeTest(props);
+  render(props);
 };
 
 export const unmount = async (props) => {
